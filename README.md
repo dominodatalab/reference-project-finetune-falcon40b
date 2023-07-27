@@ -23,7 +23,7 @@ The functions in the notebooks can be parameterized to work with either the 4 bi
 This project requires the following [compute environments](https://docs.dominodatalab.com/en/latest/user_guide/f51038/environments/) to be present:
 
 
-### lit-gpt
+### hf-falcon-40b
 **Environment Base** 
 
 nvcr.io/nvidia/pytorch:23.06-py3
