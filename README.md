@@ -14,3 +14,42 @@ Here are a list of important files in the project that you might need to edit in
 * [generate-4bit.ipynb](generate-8bit.ipynb) : This file contains code to load the Falcon-40B model in 8 bit precision, add an adapter to the model and take a user prompt to generate an output
 
 * [save_8_bit.ipynb](save_8_bit.ipynb) : This file saves the Falcon-40B model in 8 bit to disc so it can be used in future runs without having to download the model again from the Huggingface Hub. If you are using a model saved to disc, please change the value of the `model_id` variable in the `hf_falcon_40b-4bit.ipynb` and `hf_falcon_40b-4bit.ipynb` notebooks to point to the location of the model on disc.
+
+
+## Setup instructions
+
+This project requires the following [compute environments](https://docs.dominodatalab.com/en/latest/user_guide/f51038/environments/) to be present:
+
+
+### lit-gpt
+**Environment Base** 
+
+nvcr.io/nvidia/pytorch:23.06-py3
+
+**Dockerfile Instructions**
+
+```
+# System-level dependency injection runs as root
+USER root:root
+
+# Validate base image pre-requisites
+# Complete requirements can be found at
+# https://docs.dominodatalab.com/en/latest/user_guide/a00d1b/automatic-adaptation-of-custom-images/#_pre_requisites_for_automatic_custom_image_compatibility_with_domino
+RUN /opt/domino/bin/pre-check.sh
+
+# Configure /opt/domino to prepare for Domino executions
+RUN /opt/domino/bin/init.sh
+
+# Validate the environment
+RUN /opt/domino/bin/validate.sh
+
+RUN pip uninstall -y protobuf
+RUN pip install "protobuf==3.20.3"
+RUN pip install -q -U bitsandbytes==0.39.1 "datasets>=2.10.0,<3" "deepspeed" "ipywidgets"
+RUN pip install -q -U py7zr einops tensorboardX
+RUN pip install -q -U git+https://github.com/huggingface/transformers.git@850cf4af0ce281d2c3e7ebfc12e0bc24a9c40714
+RUN pip install -q -U git+https://github.com/huggingface/peft.git@e2b8e3260d3eeb736edf21a2424e89fe3ecf429d
+RUN pip install -q -U git+https://github.com/huggingface/accelerate.git@b76409ba05e6fa7dfc59d50eee1734672126fdba
+
+RUN pip uninstall -y apex
+```
