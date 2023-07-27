@@ -15,6 +15,8 @@ Here are a list of important files in the project that you might need to edit in
 
 * [save_8_bit.ipynb](save_8_bit.ipynb) : This file saves the Falcon-40B model in 8 bit to disc so it can be used in future runs without having to download the model again from the Huggingface Hub. If you are using a model saved to disc, please change the value of the `model_id` variable in the `hf_falcon_40b-4bit.ipynb` and `hf_falcon_40b-4bit.ipynb` notebooks to point to the location of the model on disc.
 
+The functions in the notebooks can be parameterized to work with either the 4 bit or 8 bit versions of the models but have been provided as separate notebooks for convinience. 
+
 
 ## Setup instructions
 
