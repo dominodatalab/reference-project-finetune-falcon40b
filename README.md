@@ -26,7 +26,7 @@ This project requires the following [compute environments](https://docs.dominoda
 ### hf-falcon-40b
 **Environment Base** 
 
-nvcr.io/nvidia/pytorch:23.06-py3
+```nvcr.io/nvidia/pytorch:23.06-py3```
 
 **Dockerfile Instructions**
 
