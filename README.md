@@ -48,13 +48,20 @@ RUN /opt/domino/bin/init.sh
 # Validate the environment
 RUN /opt/domino/bin/validate.sh
 
-RUN pip uninstall -y protobuf
-RUN pip install "protobuf==3.20.3"
-RUN pip install -q -U bitsandbytes==0.39.1 "datasets>=2.10.0,<3" "deepspeed" "ipywidgets"
-RUN pip install -q -U py7zr einops tensorboardX
-RUN pip install -q -U git+https://github.com/huggingface/transformers.git@850cf4af0ce281d2c3e7ebfc12e0bc24a9c40714
-RUN pip install -q -U git+https://github.com/huggingface/peft.git@e2b8e3260d3eeb736edf21a2424e89fe3ecf429d
-RUN pip install -q -U git+https://github.com/huggingface/accelerate.git@b76409ba05e6fa7dfc59d50eee1734672126fdba
+RUN pip uninstall -y protobuf && \
+    pip install \
+    "protobuf==3.20.3" \
+    -q -U \
+    bitsandbytes==0.39.1 \
+    "datasets>=2.10.0,<3" \
+    deepspeed \
+    ipywidgets \
+    py7zr \
+    einops \
+    tensorboardX \
+    git+https://github.com/huggingface/transformers.git@850cf4af0ce281d2c3e7ebfc12e0bc24a9c40714 \
+    git+https://github.com/huggingface/peft.git@e2b8e3260d3eeb736edf21a2424e89fe3ecf429d \
+    git+https://github.com/huggingface/accelerate.git@b76409ba05e6fa7dfc59d50eee1734672126fdba
 
 RUN pip uninstall -y apex
 ```
