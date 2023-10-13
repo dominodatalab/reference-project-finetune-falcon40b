@@ -54,7 +54,6 @@ RUN pip uninstall -y protobuf && \
     -q -U \
     bitsandbytes==0.39.1 \
     "datasets>=2.10.0,<3" \
-    deepspeed \
     ipywidgets \
     py7zr \
     einops \
