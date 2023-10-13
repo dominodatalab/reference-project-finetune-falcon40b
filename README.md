@@ -6,7 +6,7 @@ This template is licensed to Customer subject to the terms of the license agreem
 ## About this project
 This reference project shows how to fine tune the Falcon-40b on a [dataset](https://huggingface.co/datasets/samsum) to summarize conversations using the Huggingface Trainer. In this project, we will use the 4bit and 8bit quantized version of the model and train a LoRA adapter. We used a `g4dn.12xlarge` AWS instance to train the model.
 
-Here are a list of important files in the project that you might need to edit in order to customize this further for your use case.
+Here is a list of important files in the project that you might need to edit in order to customize this further for your use case.
 
 *hf_falcon_40b-4bit.ipynb* : This file contains all the code to load and finetune the Falcon-40B model on the [samsum](https://huggingface.co/datasets/samsum) dataset. The bitsandbytes configuration loads the model in 4 bit and trains a LoRA adapter
 
