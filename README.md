@@ -10,7 +10,7 @@ Here are a list of important files in the project that you might need to edit in
 
 *hf_falcon_40b-4bit.ipynb* : This file contains all the code to load and finetune the Falcon-40B model on the [samsum](https://huggingface.co/datasets/samsum) dataset. The bitsandbytes configuration loads the model in 4 bit and trains a LoRA adapter
 
-hf_falcon_40b-8bit.ipynb* : This file contains all the code to load and finetune the Falcon-40B model on the [samsum](https://huggingface.co/datasets/samsum) dataset. The bitsandbytes configuration loads the model in 8 bit and trains a LoRA adapter
+*hf_falcon_40b-8bit.ipynb* : This file contains all the code to load and finetune the Falcon-40B model on the [samsum](https://huggingface.co/datasets/samsum) dataset. The bitsandbytes configuration loads the model in 8 bit and trains a LoRA adapter
 
 *generate-4bit.ipynb* : This file contains code to load the Falcon-40B model in 4 bit precision, add an adapter to the model and take a user prompt to generate an output
 
