@@ -64,3 +64,4 @@ RUN pip uninstall -y protobuf && \
 
 RUN pip uninstall -y apex
 ```
+Don't forget to expose the relevant IDEs as pluggable workspaces, as described in the [Domino Documentation](https://docs.dominodatalab.com/en/latest/user_guide/03e062/add-workspace-ides/).
