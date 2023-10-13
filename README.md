@@ -25,6 +25,8 @@ The functions in the notebooks can be parameterized to work with either the 4 bi
 
 This project requires the following [compute environments](https://docs.dominodatalab.com/en/latest/user_guide/f51038/environments/) to be present. Also please ensure the [‘Automatically make compatible with Domino’](https://docs.dominodatalab.com/en/latest/user_guide/4e0c34/create-a-domino-environment-with-a-pre-built-image/) checkbox is selected and create the environment afresh instead of duplicating an existing environment that does not use the same base image and dependencies.
 
+** Please provision enough storage for the workspace. On disc the model occupies ~85GB. ** 
+
 
 ### hf-falcon-40b
 **Environment Base** 
