@@ -29,7 +29,7 @@ This project requires the following [compute environments](https://docs.dominoda
 
 
 ### hf-falcon-40b
-**Environment Base** 
+#### Environment Requirements
 
 ```nvcr.io/nvidia/pytorch:23.06-py3```
 
@@ -67,3 +67,6 @@ RUN pip uninstall -y protobuf && \
 RUN pip uninstall -y apex
 ```
 Don't forget to expose the relevant IDEs as pluggable workspaces, as described in the [Domino Documentation](https://docs.dominodatalab.com/en/latest/user_guide/03e062/add-workspace-ides/).
+
+#### Hardware Requirements
+A g4dn.12xlarge AWS instance was used to train the model.
