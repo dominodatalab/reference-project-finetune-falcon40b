@@ -1,7 +1,11 @@
 # Fine Tuning Falcon40b
 
 ## License
-This template is licensed to Customer subject to the terms of the license agreement between Domino and the Customer on file.
+This template is licensed under Apache 2.0 and contains the following components: 
+* Transformer [Apache 2.0](https://github.com/huggingface/transformers/blob/main/LICENSE)
+* Falcon 7B [Apache 2.0](https://huggingface.co/tiiuae/falcon-7b)
+* lit-gpt [Apache 2.0](https://github.com/Lightning-AI/lit-gpt/blob/main/LICENSE)
+* peft [Apache 2.0](https://github.com/huggingface/peft/blob/main/LICENSE)
 
 ## About this project
 This reference project shows how to fine tune the Falcon-40b on a [dataset](https://huggingface.co/datasets/samsum) to summarize conversations using the Huggingface Trainer. In this project, we will use the 4bit and 8bit quantized version of the model and train a LoRA adapter. We used a `g4dn.12xlarge` AWS instance to train the model.
